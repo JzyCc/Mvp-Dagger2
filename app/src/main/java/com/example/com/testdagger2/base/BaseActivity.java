@@ -23,7 +23,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getLayout();
+        setContentView(getLayout());
         myApplication = (MyApplication)getApplication();
         initInject();
         if(mPresenter != null){
@@ -34,7 +34,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         intEventAndData();
     }
 
-    protected abstract void getLayout();
+    protected abstract int getLayout();
 
     protected abstract void initInject();
 

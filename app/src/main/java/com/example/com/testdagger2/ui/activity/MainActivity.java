@@ -13,8 +13,8 @@ import com.example.com.testdagger2.presenter.contract.MainContract;
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View{
 
     @Override
-    protected void getLayout() {
-        setContentView(R.layout.activity_main);
+    protected int getLayout() {
+        return R.layout.activity_main;
     }
 
     @Override
